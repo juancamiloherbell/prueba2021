@@ -1,6 +1,6 @@
 # PRUEBAS PROGRAMACIÓN
 
-Las siguientes pruebas deberán cargarsé en este repositorío, creando una rama con la siguiente convención: pruebasReedsis/nombre-apellido
+Las siguientes pruebas deberán cargarsé en este repositorío, creando una rama con la siguiente convención: pruebasGAW/nombre-apellido
 
 # A tener en cuenta
 
