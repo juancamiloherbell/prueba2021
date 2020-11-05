@@ -1,11 +1,11 @@
-# PRUEBAS TEAM GOANYWHERE REDSIS
+# PRUEBAS PROGRAMACIÓN
 
 Las siguientes pruebas deberán cargarsé en este repositorío, creando una rama con la siguiente convención: pruebasReedsis/nombre-apellido
 
 # A tener en cuenta
 
 1. Las pruebas pueden ser desarrolladas en el lenguaje de programación de su preferencia.
-2. La entrega debe realizarsé como maximo el martes 20 de Octubre a las 15:00, cualquier entrega realizada despues de este horario no será tenida en cuenta
+2. La entrega debe realizarsé como maximo el viernes 06 de Noviembre a las 08:00 am, cualquier entrega realizada despues de este horario no será tenida en cuenta
 3. Para validar la fecha y hora de entrega se tendrá en cuenta únicamente la hora y fecha registradas por GitHub.
 4. **Opcionalmente** se recomienda agregar un Readme con las instrucciones de ejecución de los programas
 5. Documentar el codigo escrito en cada uno de los ejercicios
