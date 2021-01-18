@@ -5,7 +5,7 @@ Las siguientes pruebas deberán cargarsé en este repositorío, creando una rama
 # A tener en cuenta
 
 1. Las pruebas pueden ser desarrolladas en el lenguaje de programación de su preferencia.
-2. La entrega debe realizarsé como maximo el Jueves 03 de Diciembre a las 09:00 am, cualquier entrega realizada despues de este horario no será tenida en cuenta
+2. La entrega debe realizarsé como maximo XXX, cualquier entrega realizada despues de este horario no será tenida en cuenta
 3. Para validar la fecha y hora de entrega se tendrá en cuenta únicamente la hora y fecha registradas por GitHub.
 4. **Opcionalmente** se recomienda agregar un Readme con las instrucciones de ejecución de los programas
 5. Documentar el codigo escrito en cada uno de los ejercicios
