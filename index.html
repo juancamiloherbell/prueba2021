@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="prueba1">
+        <form name="rellenar" action="#">
+            <h2>Prueba 1:</h2>
+            <p>
+                ingrese nuemro de 10 digitos : <input name="numero" type="text" onkeypress="return validacion(event)" />
+            </p>
+            <p><input name="ver" type="button" value="ver" />
+        </form>
+        <div id="caja">
+
+        </div>
+    </section>
+    <section class="prueba2">
+        <h2>Prueba 2:</h2>
+        <div id="A">
+        </div>
+        <div id="B">
+        </div>
+        <div id="C">
+        </div>
+        <div id="resultado">
+        </div>
+        <p><input name="calcular" type="button" value="calcular" onclick="calcular()" />
+    </section>
+    <section class="prueba3">
+        <h2>Prueba 3:</h2>
+        <div>
+            <button onclick="getAllRequest()">Get All</button>
+            <button onclick="getByIdRequest()">Get by Id</button>
+            <!--  <button onclick="getFilteredRequest()">Get Filtered</button>
+             -->
+        </div>
+        <div>
+            <button onclick="postRequest()">Create</button>
+
+        </div>
+        <div id="data">
+        </div>
+        <!--<div>
+            <button onclick="patchRequest()">Update</button>
+        </div>
+        <div>
+            <button onclick="putRequest()">Replace</button>
+        </div>
+        <div>
+            <button onclick="deleteRequest()">Delete</button>
+        </div> -->
+    </section>
+    <!--Script prueba1 -->
+    <script>
+        function escribe() {
+            escribir = document.getElementById("caja");
+            miTitulo = /*"<h1>" +*/ document.rellenar.numero.value /*+ "</h1>"*/ ;
+            if (miTitulo.length > 10) {
+                alert('numero mayor a 10 digitos');
+                miTitulo = null;
+            }
+            if (miTitulo.length < 10) {
+                alert('numero menor a 10 digitos');
+                miTitulo = null;
+            }
+            var letras = new Array();
+            for (var i in miTitulo) {
+                if (miTitulo[i] == 1) {
+                    letras[i] = "U";
+                }
+                if (miTitulo[i] == 2) {
+                    letras[i] = 'T';
+                }
+                if (miTitulo[i] == 3) {
+                    letras[i] = "P";
+                }
+                if (miTitulo[i] == 4) {
+                    letras[i] = 'A';
+                }
+                if (miTitulo[i] == 5) {
+                    letras[i] = "G";
+                }
+                if (miTitulo[i] == 6) {
+                    letras[i] = 'M';
+                }
+                if (miTitulo[i] == 7) {
+                    letras[i] = "E";
+                }
+                if (miTitulo[i] == 8) {
+                    letras[i] = 'L';
+                }
+                if (miTitulo[i] == 9) {
+                    letras[i] = "C";
+                }
+                if (miTitulo[i] == 0) {
+                    letras[i] = 'S';
+                }
+            }
+            console.log(letras);
+            escribir.innerHTML = letras;
+        }
+
+        window.onload = function() {
+            document.rellenar.ver.onclick = escribe
+        }
+
+        function validacion(e) {
+            key = e.keycode || e.which;
+            teclado = String.fromCharCode(key);
+            numero = "0123456789"
+            especiales = "8-37-38-46";
+            teclado_especial = false;
+            for (var i in especiales) {
+                if (key == especiales[i]) {
+                    teclado_especial = true;
+                }
+            }
+            if (numero.indexOf(teclado) == -1 && !teclado_especial) {
+                return false;
+            }
+        }
+    </script>
+    <!--Script prueba 2-->
+    <script>
+        function calcular() {
+            CalcularA = document.getElementById("A");
+            CalcularB = document.getElementById("B");
+            CalcularC = document.getElementById("C");
+            Res = document.getElementById("resultado");
+            var a = 1;
+            var b = 1;
+            var c = 1;
+            while (a < 1000) {
+                b = 1;
+                while (b < 1000) {
+                    c = 1000 - a - b;
+                    if (a ** 2 + b ** 2 == c ** 2 && a < b) {
+                        console.log("los numeros son:", "a: " + a, "b: " + b, "c: " + c);
+                        numero_A = a;
+                        numero_B = b;
+                        numero_C = c;
+                        console.log(a + b + c);
+                        r = a + b + c;
+                    }
+                    b = b + 1;
+                }
+                a = a + 1;
+            }
+            CalcularA.innerHTML = numero_A;
+            CalcularB.innerHTML = numero_B;
+            CalcularC.innerHTML = numero_C;
+            Res.innerHTML = r;
+        }
+    </script>
+    <!--Script prueba3-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
