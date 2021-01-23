@@ -1,17 +1,12 @@
 function getAllRequest() {
-    mostrar = document.getElementById("data");
-    axios.get('https://securetransfer.redsis.com/rest/forms/v1/teamGoAny/payload ')
-        .then(function(res) {
-            if (res.status == 200) {
-                console.log(res.data.object);
-                mostrar.innerHTML = res.data;
-            }
+    axios.get('https://securetransfer.redsis.com/rest/forms/v1/teamGoAny/payload')
+        .then(function(response) {
+            console.log(response);
         })
-        .catch(function(err) {
-            console.log(err);
+        .catch(function(error) {
+            console.log(error);
         })
         .then(function() {});
-
 }
 
 function getByIdRequest() {
